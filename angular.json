@@ -8,7 +8,30 @@
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "styleext": "scss",
+          "spec": false
+        },
+        "@schematics/angular:class": {
+          "spec": false
+        },
+        "@schematics/angular:directive": {
+          "spec": false
+        },
+        "@schematics/angular:guard": {
+          "spec": false
+        },
+        "@schematics/angular:module": {
+          "spec": false
+        },
+        "@schematics/angular:pipe": {
+          "spec": false
+        },
+        "@schematics/angular:service": {
+          "spec": false
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -20,12 +43,39 @@
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              { "glob": "**/*", "input": "src/assets/dist", "output": "/dist/" }
             ],
             "styles": [
+              "src/assets/plugins/fontawesome-free/css/all.min.css",
+              "src/assets/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css",
+              "src/assets/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
+              "src/assets/plugins/jqvmap/jqvmap.min.css",
+              "src/assets/dist/css/adminlte.min.css",
+              "src/assets/plugins/overlayScrollbars/css/OverlayScrollbars.min.css",
+              "src/assets/plugins/daterangepicker/daterangepicker.css",
+              "src/assets/plugins/summernote/summernote-bs4.css",
+
               "src/styles.css"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/plugins/jquery/jquery.min.js",
+              "src/assets/plugins/jquery-ui/jquery-ui.min.js",
+              "src/assets/plugins/bootstrap/js/bootstrap.bundle.min.js",
+              "src/assets/plugins/chart.js/Chart.min.js",
+              "src/assets/plugins/sparklines/sparkline.js",
+              "src/assets/plugins/jqvmap/jquery.vmap.min.js",
+              "src/assets/plugins/jqvmap/maps/jquery.vmap.world.js",
+              "src/assets/plugins/jquery-knob/jquery.knob.min.js",
+              "src/assets/plugins/moment/moment.min.js",
+              "src/assets/plugins/daterangepicker/daterangepicker.js",
+              "src/assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js",
+              "src/assets/plugins/summernote/summernote-bs4.min.js",
+              "src/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
+              "src/assets/plugins/fastclick/fastclick.js",
+              "src/assets/dist/js/adminlte.js",
+              "src/assets/dist/js/pages/dashboard.js",
+              "src/assets/dist/js/demo.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
