@@ -1,14 +1,25 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './layout/sidebar/sidebar.component';
-import { FooterComponent } from './layout/footer/footer.component';
-import { HeaderComponent } from './layout/header/header.component';
-import { MainContentComponent } from './layout/main-content/main-content.component';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SidebarComponent} from './layout/sidebar/sidebar.component';
+import {FooterComponent} from './layout/footer/footer.component';
+import {HeaderComponent} from './layout/header/header.component';
+import {MainContentHeaderComponent} from './layout/main-content-header/main-content-header.component';
+
+const COMPONENTS = [
+  SidebarComponent,
+  FooterComponent,
+  HeaderComponent,
+  MainContentHeaderComponent,
+];
 
 @NgModule({
-  declarations: [SidebarComponent, FooterComponent, HeaderComponent, MainContentComponent],
+  declarations: [...COMPONENTS],
   imports: [
     CommonModule
+  ],
+  exports: [
+    ...COMPONENTS
   ]
 })
-export class CoreModule { }
+export class CoreModule {
+}
