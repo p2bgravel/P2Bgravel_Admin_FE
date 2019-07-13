@@ -2,26 +2,62 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.9.
 
-## Development server
+## Cấu trúc dự án
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+https://coggle.it/diagram/XSlAiFj7lVzvUeAb/t/p2b_admin_angular/c155739ba5e1285e5b059b80f6ca97cb1a72045ef6112d48ed8ed1398d268cf6
 
-## Code scaffolding
+## Chạy dự án trong môi trường dev
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Chạy `npm start` hoặc `yarn start` 
+
+Đường dẫn `http://localhost:4200/`
+
+##Quy định đặt tên trong project (quan trọng):
+
+**Lưu ý:**
+*   Các tên file, component, modules, ... thường phân cách bằng dash "-" VD: `article-list.component.ts`
+*   Cách đặt tên `feature.type.extension`
+    *  feature: tên file cần đặt VD: `article-list`
+    *  type: `module`, `component`, `directive`, `service`, `pipe`
+    *  extension: `ts`, `scss` ...
+*   Xem thêm : https://angular.io/guide/styleguide#naming
+
+**Refs:**
+* Cú pháp chung:  https://v7.angular.io/cli/generate
+
+###Tạo module:
+`ng g m /path/to/name-module --routing=true` 
+
+* Đường dẫn root `/`  trong trường hợp này chính là `/src/app/`
+VD: `ng g m article --routing=true`
+* Sẽ tạo các module `article.module.ts` và `article-routing.module.ts` ngay thư mục `/src/app/article`
+Option: 
+*  `--routing=true` : tạo luôn module routing
+
+###Tạo module-routing trong một module-a:
+`ng g m /path/to/module-a/module-a-routing --flat=true` 
+
+**Option:**
+*  `--flat=true` : ko cần tạo folder .
+
+###Tạo component trong module:
+
+`ng g c /path/to/folder` 
+
+VD: `ng g c /product/components/product-list` 
+* Sẽ tạo ra folder  `product-list` ngay thư mục `/src/app/product/`
+
+###Tạo service:
+
+`ng g s /path/to/folder` 
+
+* Lưu ý: tương tự như trên
+
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Chạy `npm run build` hoặc `yarn build`
 
-## Running unit tests
+Options: `--prod` : để build production
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+File build ra trong thư mục `/dist`
