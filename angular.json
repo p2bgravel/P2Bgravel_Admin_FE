@@ -72,9 +72,7 @@
               "src/assets/plugins/summernote/summernote-bs4.min.js",
               "src/assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js",
               "src/assets/plugins/fastclick/fastclick.js",
-              "src/assets/dist/js/adminlte.js",
-              "src/assets/dist/js/pages/dashboard.js",
-              "src/assets/dist/js/demo.js"
+              "src/assets/dist/js/adminlte.js"
             ],
             "es5BrowserSupport": true
           },
