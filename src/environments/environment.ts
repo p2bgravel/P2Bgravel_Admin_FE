@@ -3,7 +3,25 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+	production: false,
+
+	APIEndpointGV: '',
+
+	APIPrefix: '/api',
+	APIVersion: '/v1',
+	APIPermission: '/admin',
+	APILogin: '/auth/login',
+	APILogout: '/auth/logout',
+
+	APIMenu: '/menu',
+	APIArticleList: '/articles',
+	APIArticle: '/articles',
+	APIProductList: '/products',
+	APIProduct: '/product',
+	APIUserList: '/users',
+	APIUser: '/user',
+	APICategoryList: '/categories',
+	APICategory: '/category'
 };
 
 /*
