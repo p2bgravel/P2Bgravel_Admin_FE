@@ -23,6 +23,10 @@
 				]
 			}
 		],
+		"quotemark": [
+			true,
+			"single"
+		],
 		"no-consecutive-blank-lines": false,
 		"no-console": [true, "debug", "info", "time", "timeEnd", "trace"],
 		"no-empty": false,
@@ -35,7 +39,6 @@
 		"object-literal-key-quotes": [true, "as-needed"],
 		"object-literal-sort-keys": false,
 		"ordered-imports": false,
-		"quotemark": [true, "single"],
 		"trailing-comma": false,
 		"no-output-on-prefix": true,
 		"use-input-property-decorator": true,
